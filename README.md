@@ -7,7 +7,7 @@ It uses  simple nested computation, so if you select .netstandard1.0, it will gi
 .netstandard 1.1 upto netstandard 1.6, but also which operating systems (windows, linux, etc.).
 
 ## Try it out
-You can run it [here](http://when-i-target.azurewebsites.net/
+You can run it [here](http://when-i-target.azurewebsites.net/)
 
 ## ASP.NET core
 The solution is created with ASP.NET core 1.0. You should be able to run it by cloning and building it.
