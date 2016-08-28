@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace Moniker.Model
 {
+
     public static class Keys
     {
 

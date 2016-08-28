@@ -17,6 +17,7 @@ namespace Moniker.Model
         net461,
         net462,
         net463,
+
         netmf,
         wp7,
         wp8,
@@ -26,6 +27,7 @@ namespace Moniker.Model
         mono,
         sl4,
         sl5,
+
         netstandard1_0,
         netstandard1_1,
         netstandard1_2,
@@ -34,9 +36,17 @@ namespace Moniker.Model
         netstandard1_5,
         netstandard1_6,
         netcoreapp1_0,
+
+        win,
         win8,
         win81,
         win10,
+
+        netcore,
+        netcore45,
+        netcore451,
+        netcore50,
+
         Silverlight,
         Profile2,
         Profile3,
@@ -56,10 +66,12 @@ namespace Moniker.Model
         Profile49,
         Profile78,
         Profile84,
+        Profile88,
         Profile111,
         Profile151,
         Profile157,
         Profile259,
+
         Windows10,
         WinStore,
         XBox,
@@ -67,6 +79,7 @@ namespace Moniker.Model
         Windows8,
         Windows7,
         WinPhone,
+
         Ubuntu,
         OSX,
         IOS,
@@ -77,13 +90,10 @@ namespace Moniker.Model
         SUSE,
         Fedora,
         Android,
-        win,
-        netcore,
-        netcore45,
-        netcore451,
-        netcore50,
+
+
         Unknown,
-        Profile88
+        
     }
 
 

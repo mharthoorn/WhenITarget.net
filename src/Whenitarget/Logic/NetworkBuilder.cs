@@ -6,8 +6,11 @@ namespace Moniker.Model
     {
         public static Network Build()
         {
-            // Sources: http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html
-            Network network = new Network();
+            // Sources: 
+            // http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html
+            // https://docs.microsoft.com/en-us/dotnet/articles/standard/library
+
+            var network = new Network();
             
             network.Add(Group.NET, Key.net11, ".NET framework 1.1", Kind.Framework);
             network.Add(Group.NET, Key.net20, ".NET framework 2.0", Kind.Framework);
