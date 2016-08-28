@@ -1,0 +1,115 @@
+﻿
+@model Moniker.Model.MonikersVm
+@using Moniker.Model;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    hello
+</div>
+<div class="tron">
+    <div class="container">
+        <h1>When I target .NET</h1>
+        @if (Model.Selected.Count > 0)
+        {
+            <h4>
+                When i target 
+                <span class="highlight Selected">dark blue</span><span>, </span>
+                @if (Model.Upstream.Count > 0)
+                {
+                    <span>it will run</span>
+                    <span class="highlight RunsOn">green</span><span>, </span> 
+                }
+                @if (Model.Downstream.Count > 0)
+                {
+                    <span>it runs on</span>
+                    <span class="highlight Runs">light blue</span>
+                
+                }
+            </h4>
+        }
+        else
+        {
+            <h4>at least one framework...</h4>
+        }
+        
+    </div>
+</div>
+<div class="row">
+    <div class="columns">
+        @*<div class="column app">
+                <div class="columntitle">
+                    Your software
+                </div>
+
+                <form asp-controller="Home" asp-action="Index" method="post">
+                    <div class="group">
+                        <div class="grouptitle">Application</div>
+                        <div class="block">
+                            <ul class="radio">
+                                <li>
+                                    <input asp-for="ProjectType" id="radioapp" value="app" type="radio" />
+                                    <label asp-for="ProjectType">Application</label>
+                                </li>
+                                <li>
+                                    <input asp-for="ProjectType" id="radiolib" value="lib" type="radio" />
+                                    <label asp-for="ProjectType">Library</label>
+                                </li>
+                            </ul>
+                            <label asp-for="Targets">targets</label>
+                            <input asp-for="Targets" type="text" value="@Model.Targets" />
+                        </div>
+                    </div>
+                    <input type="submit" style="visibility: hidden;" />
+                </form>
+
+            </div>*@
+        <div class="column framework">
+            <div class="columntitle">Standards</div>
+            @Html.Partial("Group", Model.CreateGroupVm(".NET Standard", Kind.Framework, Group.netstandard))
+        </div>
+        <div class="column framework">
+            <div class="columntitle">Portable</div>
+            @Html.Partial("Group", Model.CreateGroupVm("Portable class libraries", Kind.Framework, Group.PCL))
+        </div>
+
+        <div class="column framework">
+            <div class="columntitle">Classic Frameworks</div>
+            @Html.Partial("Group", Model.CreateGroupVm(".NET Framework", Kind.Framework, Group.NET))
+        </div>
+
+        <div class="column framework">
+            <div class="columntitle">Small Frameworks</div>
+            @Html.Partial("Group", Model.CreateGroupVm("Other Frameworks", Kind.Framework, Group.Other))
+        </div>
+
+        <div class="column framework">
+            <div class="columntitle">New Frameworks</div>
+
+            @Html.Partial("Group", Model.CreateGroupVm("dotnet core", Kind.Framework, Group.netcoreapp))
+            @Html.Partial("Group", Model.CreateGroupVm("Windows Store Frameworks", Kind.Framework, Group.WinStore))
+            @Html.Partial("Group", Model.CreateGroupVm("Windows Store .NET core Frameworks", Kind.Framework, Group.WinStoreNetCore))
+        </div>
+
+        <div class="column platform">
+            <div class="columntitle">Windows Platforms</div>
+            @Html.Partial("Group", Model.CreateGroupVm("Windows", Kind.Platform, Group.Windows))
+            @Html.Partial("Group", Model.CreateGroupVm("Browser", Kind.Platform, Group.Browser))
+        </div>
+        <div class="column platform">
+            <div class="columntitle">Other Platforms</div>
+            @Html.Partial("Group", Model.CreateGroupVm("Other", Kind.Platform, Group.NonWindows))
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        $(".block").click(function (e) {
+            alert(e);
+        });
+
+    });
+    
+</script>

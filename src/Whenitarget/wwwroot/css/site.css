@@ -1,0 +1,160 @@
+﻿body {
+    text-align: center;
+}
+
+.tron {
+    background: linear-gradient(135deg,#364c68 30%,#6a7d99 99%);
+    padding: 24px 0;
+}
+
+.tron h1 {
+    font-family: wf_segoe-ui_light,"Segoe UI Light","Segoe WP Light",wf_segoe-ui_normal,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;
+    color: #a6ee01;
+    font-size: 48px;
+}
+.tron h2 {
+    font-family: wf_segoe-ui_light,"Segoe UI Light","Segoe WP Light",wf_segoe-ui_normal,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;
+    color: white;
+    font-size: 24px;
+}
+
+.tron h4 {
+    font-family: wf_segoe-ui_light,"Segoe UI Light","Segoe WP Light",wf_segoe-ui_normal,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;
+    color: white;
+    
+}
+.columns {
+    margin: 0 30px;
+    align-content: center;   
+    
+}
+
+.column {
+    width: 240px;
+    float: left;
+    padding: 4px;
+    margin: 5px;
+}
+
+.columntitle {
+    
+    color: white;
+    text-align: center;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+.group {
+    background: white;
+    padding: 4px;
+    margin-bottom: 5px;
+    box-shadow: rgba(0,0,0, 0.4) 1px 1px 4px;
+}
+
+.grouptitle {
+    background-color: white;
+    text-align: center;
+    padding: 4px;
+    font-weight: bold;
+    margin-bottom: 0;
+    
+}
+
+.block {
+    padding: 0;
+    margin-top: 2px;
+    text-align: center;
+    background-color: #f8f8f8; 
+    border: 1px dotted #ccc;
+    cursor: pointer;
+}
+
+.block a {
+    color: #444;
+    display: block;
+    margin: 0;
+    height: auto;
+}
+
+.block a:hover{
+    text-decoration: none;
+}
+
+.block .key {
+    background-color: #96EE51;
+    padding: 1px 8px 2px 8px;
+    border-radius: 4px;
+    color: #440;
+    font-size: 10px;
+
+}
+.Downstream .key {
+    background-color: #76CE31;
+}
+
+
+.block a {
+    padding: 5px 0;
+}
+
+.platform .block a {
+    padding: 10px 0;
+}
+
+
+
+
+.Runs {
+    background-color: #3399FF;
+    color: #333;
+}
+
+
+.RunsOn {
+    background-color: #96EE51;
+    color: #333;
+}
+
+.RunsOn.Runs {
+   background: repeating-linear-gradient(
+      135deg,
+      #96EE51,
+      #96EE51 6px,
+      #3399FF 6px,
+      #3399FF 8px
+    );
+}
+
+.RunsOnSome {
+   background: repeating-linear-gradient(
+      35deg,
+      #96EE51,
+      #96EE51 2px,
+      white 2px,
+      white 8px
+    );
+}
+
+
+
+ .Selected, Selected.Runs, Selected.RunsOn, Selected.RunsOnSome {
+    background-color: #277bce;
+    color: white;
+
+}
+
+.highlight {
+    padding: 0 8px 2px 8px;
+    color: white;
+}
+
+ul.radio {
+    text-align: left;
+    list-style:none;
+    padding-left: 20px;
+}
+ul.radio label {
+    
+    padding-left: 0;
+}
+

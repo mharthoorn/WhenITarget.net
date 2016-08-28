@@ -1,0 +1,38 @@
+@using Moniker.Model
+@model GroupVm
+
+<div class="group">
+    <div class="grouptitle">@Model.Title</div>
+
+    @foreach (var item in Model.Items)
+    {
+
+
+        string status = "";
+        if (item.Selected) { status += " Selected"; }
+        else
+        {
+            if (item.Runs > 0) { status += " Runs"; }
+            if (item.RunsOn > 0)
+            {
+                if (item.RunsOn >= Model.SelectedCount)
+                {
+                    status += " RunsOn";
+                }
+                else
+                {
+                    status += " RunsOnSome";
+
+                }
+            }
+
+        }
+        string kind = item.Kind.ToString();
+        <div class="block @status @kind" id="@item.Key" title="@item.Caption">
+            <a href="~/?keys=@Model.Targets.Toggle(item.Key).AsQueryString()">
+                <span class="key">@item.Key.AsReadableString()</span><br/>
+                @item.Caption
+            </a>
+        </div>
+    }
+</div>
