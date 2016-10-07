@@ -35,6 +35,7 @@ namespace Moniker.Model
         netstandard1_4,
         netstandard1_5,
         netstandard1_6,
+        netstandard2_0,
         netcoreapp1_0,
 
         win,

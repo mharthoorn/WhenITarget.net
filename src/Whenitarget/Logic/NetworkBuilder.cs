@@ -23,7 +23,7 @@ namespace Moniker.Model
             network.Add(Group.NET, Key.net46, ".NET framework 4.6", Kind.Framework);
             network.Add(Group.NET, Key.net461, ".NET framework 4.6.1", Kind.Framework);
             network.Add(Group.NET, Key.net462, ".NET framework 4.6.2", Kind.Framework);
-            network.Add(Group.NET, Key.net463, ".NET framework 4.6.2", Kind.Framework);
+            network.Add(Group.NET, Key.net463, ".NET framework 4.6.3", Kind.Framework);
             network.Add(Group.Other, Key.netmf, ".NET Microframework", Kind.Framework);
             network.Add(Group.Other, Key.wp7, "Windows Phone 7", Kind.Framework);
             network.Add(Group.Other, Key.wp8, "Windows Phone 8", Kind.Framework);
@@ -42,6 +42,7 @@ namespace Moniker.Model
             network.Add(Group.netstandard, Key.netstandard1_4, ".NET platform standard 1.4", Kind.Standard);
             network.Add(Group.netstandard, Key.netstandard1_5, ".NET platform standard 1.5", Kind.Standard);
             network.Add(Group.netstandard, Key.netstandard1_6, ".NET platform standard 1.6", Kind.Standard);
+            network.Add(Group.netstandard, Key.netstandard2_0, ".NET platform standard 2.0", Kind.Standard);
 
             network.Add(Group.netcoreapp, Key.netcoreapp1_0, ".NET core 1.0", Kind.Framework);
 
@@ -169,6 +170,7 @@ namespace Moniker.Model
             network.RunsOn(Key.netstandard1_4, Key.net461, Key.uap10);
             network.RunsOn(Key.netstandard1_5, Key.net462);
             network.RunsOn(Key.netstandard1_6, Key.netcoreapp1_0, Key.net463, Key.mono);
+            network.RunsOn(Key.netstandard2_0, Key.net461);
 
             network.AutolinkProfiles();
 
